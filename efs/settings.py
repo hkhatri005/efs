@@ -133,9 +133,9 @@ USE_TZ = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd6bl3nu9ngre0g',
-        'USER': 'sdcklekxvvcbzo',
-        'PASSWORD': '853e83b84c9e405b8ab05c93a82a9e32d3af9004bf7ebd1994ab0110f58f660d',
+        'NAME': 'd839m1bhjnb2n3',
+        'USER': 'wxffsczipjjjoj',
+        'PASSWORD': 'b943eb0e2af53c11ec68866c12a7605e7fb7904939fc391ab6fd593efc29dafa',
         'HOST': 'ec2-174-129-41-127.compute-1.amazonaws.com',
         'PORT': '5432',
     }
