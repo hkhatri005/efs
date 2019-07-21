@@ -69,6 +69,8 @@
                 <li><a href="{% url 'portfolio:customer_list' %}">Customers</a></li>
                <li><a href="{% url 'portfolio:investment_list' %}">Investments</a></li>
                 <li><a href="{% url 'portfolio:stock_list' %}">Stocks</a></li>
+                <li><a href="{% url 'portfolio:mutualfund_list' %}">Mutual Fund</a></li>
+
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -79,9 +81,11 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{% url 'logout' %}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+
                         </ul>
                     </li>
                 {% else %}
+
                     <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 {% endif %}
             </ul>

@@ -55,12 +55,22 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                 <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/mutual funds.jpg" %}" alt="stocks"/>
+                                        <div class="caption">
+                                            <h2>Mutual Fund</h2>
+                                            <p>Our Mutual funds by various customers </p>
+                                            <p><a class="btn btn-primary" href="{% url 'portfolio:mutualfund_list' %}"
+                                                  role="button">View
+                                                details &raquo;</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
     </body>
+
     </html>
+
 {% endblock %}

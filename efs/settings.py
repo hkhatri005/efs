@@ -80,7 +80,7 @@ ROOT_URLCONF = 'efs.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -162,10 +162,15 @@ STATICFILES_DIRS = (
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = '/home'
 LOGOUT_REDIRECT_URL = '/home'
 
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '	a0e3c0d4a1e375'
+EMAIL_HOST_PASSWORD = '	810d6756983e80'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
