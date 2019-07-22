@@ -1,6 +1,18 @@
 {% extends 'portfolio/base.html' %}
 {% load staticfiles %}
 {% block content %}
+
+ <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .page-container {
+            font-weight: bold;
+            font-size: medium;
+            background: lightgrey;
+
+        }
+
+    </style>
+
             {% if user.is_authenticated %}
                 <div class="page-container">
 
@@ -21,10 +33,7 @@
                                         <img src="{% static "images/customer.jpg" %}" alt="customer"/>
                                         <div class="caption">
                                             <h2>Customer</h2>
-                                            <p>We see our success in our customers success, it gives us an immense
-                                                pleasure when our
-                                                advises
-                                                turn out to be fruitful. </p>
+                                            <p>We see our success in our customers success.You grow we grow </p>
                                             <p><a class="btn btn-primary" href="{% url 'portfolio:customer_list' %}"
                                                   role="button">View
                                                 details &raquo;</a></p>

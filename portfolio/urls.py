@@ -21,12 +21,10 @@ urlpatterns = [
     path('investment/create/', views.investment_new, name='investment_new'),
     path('investment/<int:pk>/delete/', views.investment_delete, name='investment_delete'),
     path('customer/<int:pk>/portfolio/', views.portfolio, name='portfolio'),
-    path('mutualfund_list', views.mutualfund_list, name='mutualfund_list'),
-    path('mutual/<int:pk>/edit/', views.mutualfund_edit, name='mutualfund_edit'),
-    path('mutual/create/', views.mutualfund_new, name='mutualfund_new'),
-    path('mutual/<int:pk>/delete/', views.mutualfund_delete, name='mutualfund_delete'),
-
+    url(r'^mutualfund_list/$', views.mutualfund_list, name='mutualfund_list'),
+    url(r'^mutualfund/(?P<pk>\d+)/delete/$', views.mutualfund_delete, name='mutualfund_delete'),
+    url(r'^mutualfund/(?P<pk>\d+)/edit/$', views.mutualfund_edit, name='mutualfund_edit'),
+    url(r'^mutualfund/create/$', views.mutualfund_new, name='mutualfund_new'),
     url(r'^customers_json/', views.CustomerList.as_view()),
-
 ]
 urlpatterns = format_suffix_patterns(urlpatterns)
